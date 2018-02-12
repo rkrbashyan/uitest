@@ -1,0 +1,265 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.container {
+    border: 2px solid lightgray;
+    padding: 15px 15px 15px 0; 
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h3, h4 {
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #5cb85c;
+}
+
+a, a:hover, a:visited, a:active {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.avatar {
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.avatar-img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.avatar-heart {
+    background: url('../assets/like.svg') no-repeat 50% 50%, #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid lightgray;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.avatar-heart:hover {
+    background: url('../assets/like_hover.svg') no-repeat 50% 50%, #fff;
+}
+
+
+.avatar-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.decription {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.first-minutes {
+    color: darkviolet;
+    font-size: 70%;
+    font-weight: bold;
+
+}
+
+.rates {
+    background: url('../assets/star.svg');
+    background-repeat: repeat-x round;
+    background-size: 20px 20px;
+    width: 100px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.review-txt {
+    color: lightgray;
+    font-size: 70%;
+    margin-top: 5px;
+}
+
+.rating-points {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.rating-points-txt{
+    color: lightgray;
+    font-size: 70%;
+    width: 100%;
+    margin-top: -5px;
+}
+
+.price {
+    font-size: 110%;
+    font-weight: bold;
+    margin-top: -6px;
+}
+
+.member-since{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.member-since-txt {
+    color: lightgray;
+    font-size: 70%;
+    margin-top: -5px;
+}
+
+
+.button-phone {
+    background: url('../assets/phone.svg') no-repeat 14px 50%, #5cb85c;
+    padding-left: 30px;
+}
+
+.button-phone:hover {
+    background: url('../assets/phone.svg') no-repeat 14px 50%, lightblue;
+}
+
+.button-chat {
+    background: url('../assets/chat.svg') no-repeat 17px 50%, #5cb85c;
+    padding-left: 32px;
+    background-size: 22px 22px;
+}
+
+.button-chat:hover {
+    background: url('../assets/chat.svg') no-repeat 17px 50%, lightblue;
+    background-size: 24px 24px;
+} 
+
+button {
+    width: 100%;
+    margin: 10px 0 5px 0;
+}
+
+button:hover {
+    background-color: lightblue !important;
+    border: none;
+}
+
+.info-block {
+    height: 100%;
+}
+
+.diamond {
+    height: 24px;
+    width: auto;
+    margin-top: -5px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .rate-block {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+    }
+ }
+ 
+
+ @media only screen and (max-width: 768px) {
+    .col-xs-4{
+        width: 33.333%!important;
+    }
+
+    .col-xs-8{
+        width: 66.666%!important;
+    }
+
+    .rate-block{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+    }
+
+    .rate-col{
+        width: 22.22%;
+        padding: 0px 15px;
+    }
+
+    .btn-block{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .btn-col{
+        width: 33.333%;
+        padding: 0px 5px;
+    }
+
+    .rate-col-points{
+        order: 2;
+    }
+
+    .first-minutes-xs {
+        background:  darkviolet;
+        color: white;
+        padding: 5px;
+        border-radius: 3px;
+        font-size: 60%;
+        position: relative;
+    }
+
+    .first-minutes-xs::after{
+        right: 0;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(194, 225, 245, 0);
+        border-right-color: #fff;
+        border-width: 32px;
+        margin-top: -32px;
+    }
+
+    .price {
+        padding-left: 10px;
+        margin-top: -2px;
+    }
+    
+ }
+
+@media only screen and (max-width: 320px) {
+    body {
+       font-size: 14px;
+    }
+ }
+
+@media only screen and (max-width: 1024px) {
+    .btn-block button {
+       font-size: 14px;
+    }
+
+ }
+
+ .cusrom-row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+ }
