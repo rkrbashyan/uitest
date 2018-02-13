@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.6">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>UI Coding Test</title>
@@ -15,74 +14,60 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 custom-row">
-
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 avatar-block">
-                    <div class="avatar">
-                        <img class="avatar-img" src="assets/avatar.jpeg">
-                        <div class="avatar-heart"></div>
-                    </div>
+        <div class="row info-block">
+            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                <div class="avatar-block">
+                    <a href="http://www.google.com" target="_blank"><img class="avatar-img" src="assets/avatar.jpeg"></a>
+                    <div class="avatar-heart"></div>
                 </div>
-
-                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                    <h3>
-                        The Love Clarvoiyant
-                    </h3>
-                    <h4>
-                        Stop guessing. Known for accuracy.
-                    </h4>
+            </div>
+            
+            <div class="col-xs-8 col-sm-5 col-md-5 col-lg-5">
+                <div class="description-block">
+                    <h3>The Love Clarvoiyant</h3>
+                    <h4> Stop guessing. Known for accuracy.</h4>
                     <p class="decription">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.
-                    </p>
-                    <a href="#" class="read-more">
-                        Read More
-                    </a>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                    </p> 
+                    <a href="#">Read More</a>  
                 </div>
             </div>
-
-
-
-            <div class="col-md-4 col-lg-4">
-                <div class="row info-block">
-                    <div class="col-md-6 col-lg-6 rate-block">
-                        <div class="rate-col">
-                            <div class="rates"></div>
-                            <div class="review-txt">59,222 REVIEWS</div>
-                        </div>
-                        <div class="rate-col rate-col-points">
-                            <div class="rating-points">67,924
-                                <img src="./assets/diamond.svg" class="diamond">
-                            </div>
-                            <div class="rating-points-txt">RATING POINTS</div>
-                        </div>
-                        <div class="rate-col">
-                            <div class="member-since">2009</div>
-                            <div class="member-since-txt">MEMBER SINCE</div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6 col-ld-6 btn-block">
-                        <div class="btn-col">
-                            <p class="first-minutes first-minutes-xs">First 3 Minutes Free</p>
-                            <p class="price">$ 8.99 / min.</p>
-                        </div>
-                        <div class="btn-col">
-                            <button class="btn btn-success button-phone">Call Now</button>
-                        </div>
-                        <div class="btn-col">
-                            <button class="btn btn-success button-chat">Chat Now</button>
-                        </div>
-                    </div>
+            
+            <div class="col-xs-8 col-sm-2 col-md-2 col-lg-2 rate-block">
+                <div>
+                    <div class="rates"></div>
+                    <div class="review-txt">59,222 REVIEWS</div>
+                    <div class="review-xss-txt">59K REVIEWS</div>
+                </div>
+                <div class="rate-col-points">
+                    <div class="rating-points">67,924<img src="./assets/diamond.svg" class="diamond"></div>
+                    <div class="rating-points-txt">RATING POINTS</div>
+                </div>
+                <div>
+                    <div class="member-since">2009</div>
+                    <div class="member-since-txt">MEMBER SINCE</div>
                 </div>
             </div>
+            
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <div class="btn-block">
+                    <div class="btn-col">
+                        <p class="first-minutes first-minutes-xs">First 3 Minutes Free</p>
+                        <p class="price">$ 8.99 / min.</p>
+                    </div>
+                    <div class="btn-col">
+                        <button class="btn btn-success button-phone" onclick="window.open('http://amazon.com')">Call Now</button>
+                    </div>
+                    <div class="btn-col">
+                        <button class="btn btn-success button-chat" onclick="window.open('http://microsoft.com')">Chat Now</button>
+                    </div>
+                </div>
+            </div> 
         </div>
     </div>
-    </div>
 </body>
-
 </html>

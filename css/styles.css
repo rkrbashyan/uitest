@@ -6,33 +6,21 @@ body {
 
 .container {
     border: 2px solid lightgray;
-    padding: 15px 15px 15px 0; 
+    padding: 10px;
 }
 
-p {
-    margin-bottom: 0;
-}
-
-h3, h4 {
-    margin-bottom: 1.5rem;
-}
-
-h3 {
-    color: #5cb85c;
-}
-
-a, a:hover, a:visited, a:active {
-    color: #5cb85c;
-    text-decoration: none;
-}
-
-.avatar {
-    width: 100%;
-    background-size: cover;
+.avatar-block {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+    align-content: center;
+    height: 100%;
     position: relative;
-}
+} 
 
-.avatar-img{
+.avatar-img {
     width: 100%;
     border-radius: 50%;
 }
@@ -40,25 +28,39 @@ a, a:hover, a:visited, a:active {
 .avatar-heart {
     background: url('../assets/like.svg') no-repeat 50% 50%, #fff;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    min-width: 20%;
+    min-height: 20%;
     border: 1px solid lightgray;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 7%;
+    right: 7%;
 }
 
 .avatar-heart:hover {
     background: url('../assets/like_hover.svg') no-repeat 50% 50%, #fff;
 }
 
-
-.avatar-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h3 {
+    color: #5cb85c;
 }
 
+h3,
+h4 {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.info-block {
+    display: flex;
+}
 
 .decription {
     display: -webkit-box;
@@ -68,11 +70,14 @@ a, a:hover, a:visited, a:active {
     text-overflow: ellipsis;
 }
 
-.first-minutes {
-    color: darkviolet;
-    font-size: 70%;
-    font-weight: bold;
+.rate-block, .description-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.rate-block {
+    margin: 20px 0px 0px 0px;
 }
 
 .rates {
@@ -81,36 +86,40 @@ a, a:hover, a:visited, a:active {
     background-size: 20px 20px;
     width: 100px;
     height: 20px;
-    margin-top: 2px;
+    margin-top: 5px;
 }
 
 .review-txt {
     color: lightgray;
     font-size: 70%;
-    margin-top: 5px;
+    margin-top: 6px;
+}
+
+.review-xss-txt {
+    display: none
 }
 
 .rating-points {
-    font-size: 1.5rem;
+    font-size: 180%;
     font-weight: bold;
     white-space: nowrap;
 }
 
-.rating-points-txt{
+.diamond {
+    height: 24px;
+    width: auto;
+    margin-top: -5px;
+}
+
+.rating-points-txt {
     color: lightgray;
     font-size: 70%;
     width: 100%;
     margin-top: -5px;
 }
 
-.price {
-    font-size: 110%;
-    font-weight: bold;
-    margin-top: -6px;
-}
-
-.member-since{
-    font-size: 1.5rem;
+.member-since {
+    font-size: 180%;
     font-weight: bold;
 }
 
@@ -120,26 +129,6 @@ a, a:hover, a:visited, a:active {
     margin-top: -5px;
 }
 
-
-.button-phone {
-    background: url('../assets/phone.svg') no-repeat 14px 50%, #5cb85c;
-    padding-left: 30px;
-}
-
-.button-phone:hover {
-    background: url('../assets/phone.svg') no-repeat 14px 50%, lightblue;
-}
-
-.button-chat {
-    background: url('../assets/chat.svg') no-repeat 17px 50%, #5cb85c;
-    padding-left: 32px;
-    background-size: 22px 22px;
-}
-
-.button-chat:hover {
-    background: url('../assets/chat.svg') no-repeat 17px 50%, lightblue;
-    background-size: 24px 24px;
-} 
 
 button {
     width: 100%;
@@ -151,49 +140,62 @@ button:hover {
     border: none;
 }
 
-.info-block {
-    height: 100%;
+.price {
+    font-size: 110%;
+    font-weight: bold;
+    margin-top: -6px;
 }
 
-.diamond {
-    height: 24px;
-    width: auto;
-    margin-top: -5px;
+.first-minutes {
+    color: darkviolet;
+    font-size: 70%;
+    font-weight: bolder;
+    margin-top: 25px;
 }
 
+.button-phone {
+    background: url('../assets/phone.svg') no-repeat 0px 50%, #5cb85c;
+    background-size: 40px 40px;
+    padding-left: 30px;
+}
 
-@media only screen and (min-width: 768px) {
+.button-phone:hover {
+    background: url('../assets/phone.svg') no-repeat 0px 50%, lightblue;
+    background-size: 40px 40px;
+}
+
+.button-chat {
+    background: url('../assets/chat.svg') no-repeat 10px 50%, #5cb85c;
+    padding-left: 32px;
+    background-size: 22px 22px;
+}
+
+.button-chat:hover {
+    background: url('../assets/chat.svg') no-repeat 10px 50%, lightblue;
+    background-size: 24px 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .info-block {
+        display: block;
+    }
+
     .rate-block {
-       display: flex;
-       flex-direction: column;
-       justify-content: space-between;
-    }
- }
- 
-
- @media only screen and (max-width: 768px) {
-    .col-xs-4{
-        width: 33.333%!important;
-    }
-
-    .col-xs-8{
-        width: 66.666%!important;
-    }
-
-    .rate-block{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-        align-content: center;
+        justify-content: space-between;
+        float: right;
+        align-items: flex-start;
     }
 
-    .rate-col{
-        width: 22.22%;
-        padding: 0px 15px;
-    }
-
+    .rate-col-points {
+        order: 2;
+    } 
+    
     .btn-block{
         display: flex;
         flex-direction: row;
@@ -208,15 +210,12 @@ button:hover {
         padding: 0px 5px;
     }
 
-    .rate-col-points{
-        order: 2;
-    }
-
     .first-minutes-xs {
         background:  darkviolet;
         color: white;
         padding: 5px;
         border-radius: 3px;
+        border: none;
         font-size: 60%;
         position: relative;
     }
@@ -235,31 +234,37 @@ button:hover {
         border-width: 32px;
         margin-top: -32px;
     }
-
+    
     .price {
         padding-left: 10px;
         margin-top: -2px;
-    }
-    
- }
-
-@media only screen and (max-width: 320px) {
-    body {
-       font-size: 14px;
-    }
- }
-
-@media only screen and (max-width: 1024px) {
-    .btn-block button {
-       font-size: 14px;
+        font-weight: bolder;
     }
 
+    button {
+        height: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .button-phone {
+        white-space: normal; 
+    }
+
+    .button-chat {
+        white-space: normal; 
+    }
  }
 
- .custom-row{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+ @media only screen and (max-width: 320px) {
+     .review-txt{ 
+         display: none;
+     }
+     .review-xss-txt {
+        color: lightgray;
+        font-size: 70%;
+        margin-top: 6px;
+     }
  }
