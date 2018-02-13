@@ -96,7 +96,7 @@ a:active {
 }
 
 .review-xss-txt {
-    display: none
+    display: none;
 }
 
 .rating-points {
@@ -263,6 +263,7 @@ button:hover {
          display: none;
      }
      .review-xss-txt {
+        display: inline-block;
         color: lightgray;
         font-size: 70%;
         margin-top: 6px;
